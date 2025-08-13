@@ -10,6 +10,9 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+env:
+  HELLO_FROM: Karthik Somaraju
+
 jobs:
 
   build:
@@ -27,7 +30,6 @@ jobs:
 
     - name: Test
       run: go test -v ./...
-      HELLO_FROM: Karthik Somaraju
 
     - name: Run
       run: go run ./...
