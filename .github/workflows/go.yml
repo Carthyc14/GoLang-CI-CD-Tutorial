@@ -9,9 +9,23 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs: # this allows on a button press to send info to the job
+      who_says_hello:
+        description: This is the person or persons you would like to greet
+        required: false
+        default: Karthik
+        type: string
+        #type: choice
+        #options:
+        # - Karthik
+        # - Snigdha
+        # - Shobha
+        # - Narender
+        # - Hrithik
+        # - Shriyaan
 
 env:
-  HELLO_FROM: Karthik Somaraju
+  HELLO_FROM: ${{ github.event.inputs.who_says_hello }} # This is now the default Karthik or a custom value
 
 jobs:
 
