@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  HELLO_FROM: KSomaraju
+  HELLO_FROM: Karthik Somaraju
 
 jobs:
 
