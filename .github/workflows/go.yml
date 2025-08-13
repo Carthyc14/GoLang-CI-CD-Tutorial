@@ -27,8 +27,8 @@ jobs:
 
     - name: Test
       run: go test -v ./...
-env:
-  HELLO_FROM: Karthik Somaraju
+      env:
+      HELLO_FROM: Karthik Somaraju
 
     - name: Run
       run: go run ./...
